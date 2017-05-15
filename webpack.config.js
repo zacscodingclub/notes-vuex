@@ -2,7 +2,7 @@ module.exports = {
   entry: './main.js',
   output: {
     path: __dirname,
-    filename: 'build.js'
+    filename: 'bundle.js'
   },
   module: {
     loaders: [
@@ -16,7 +16,7 @@ module.exports = {
       },
       {
         test: /\.vue$/,
-        loader: 'vue',
+        loader: 'vue-loader',
         exclude: /node_modules/
       }
     ]

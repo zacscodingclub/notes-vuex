@@ -2,8 +2,9 @@ import Vue from 'vue'
 import store from './vuex/store'
 import App from './components/App.vue'
 
-new Vuew({
+new Vue({
   store,
   el: 'body',
-  components: { App }
+  components: { App },
+  render: h => h(App)
 })
