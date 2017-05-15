@@ -8,17 +8,18 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'babel',
-        exclude: /node_modules/
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        query: {
+          presets: ['es2015']
+        }
       },
       {
         test: /\.vue$/,
-        loader: 'vue'
+        loader: 'vue',
+        exclude: /node_modules/
       }
     ]
   },
-  babel: {
-    presets: ['es2015'],
-    plugins: ['transform-runtime']
-  }
+  plugins: []
 }
